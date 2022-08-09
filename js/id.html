@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reference</title>
+    <link rel="stylesheet" href="..\bower_components\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\bower_components\bootstrap\dist\js\bootstrap.min.js">
+    <script>
+        function bodyload() {
+            // By using DOM
+            // By using Name
+
+            //By using ID
+            // document.getElementById("pic").src = "../images/1.avif";
+            // document.getElementById("btnSubmit").value = "Submit";
+
+            //By using Tag Name
+            // var x = document.getElementsByTagName("div");
+            // alert("Total No of Div's = "+x.length);
+
+            //By using class name
+            // var x = document.getElementsByClassName("form-group");
+            // alert("Total No of Form Group = "+x.length);
+
+            // By using common Name
+            var x = document.getElementsByName("pay");
+            alert("Total No of Payment Methods = " + x .length);
+
+        }
+    </script>
+</head>
+<body class="container" onload="bodyload()">
+    <h2>HTML and JavaScript</h2>
+    <div class="form-group">
+        <img src="" name="pic" id="pic" width="100" height="100" border="1" alt="">
+    </div>
+
+    <div class="form-group">
+        <form action="" id="frmHome" name="frmHome">
+            Name:
+            <input id="txtName" name="txtName" type="text">
+            <input id="btnSubmit" name="btnSubmit" type="button">
+        </form>
+    </div>
+
+    <fieldset>
+        <legend>Payment Methods</legend>
+        <input type="radio" name="pay">Credit Card
+        <input type="radio" name="pay">UPI
+    </fieldset>
+</body>
+</html>

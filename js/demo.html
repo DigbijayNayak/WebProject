@@ -1,0 +1,44 @@
+<head>
+  <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../Fonts/css/all.css"> -->
+  <script type="text/javascript">
+      var products = ["../images/1.avif","../images/2.avif","../images/3.avif","../images/4.avif","../images/5.avif"];
+      function ChangeImage(){
+         var sliderValue = document.getElementById("slider").value;
+         document.getElementById("pic").src= products[sliderValue];
+      }
+      function bodyload(){
+          document.getElementById("pic").src= products[0];
+      }
+      var count=0;
+      function PreviousClick(){
+          count--;
+          document.getElementById("pic").src = products[count];
+          document.getElementById("slider").value = count;
+      }
+      function NextClick(){
+          count++;
+          document.getElementById("pic").src = products[count];
+          document.getElementById("slider").value = count;
+      }
+  </script>
+</head>
+<body class="container-fluid" onload="bodyload()" >
+<div class="card">
+  <div class="card-header text-center">
+      <h2>Amazon Products</h2>
+  </div>
+  <div class="card-body text-center">
+      <button onclick="PreviousClick()" class="btn btn-outline-primary">
+          <span class="fa fa-chevron-circle-left"></span>
+      </button>
+      <img id="pic" width="400" height="300">
+      <button onclick="NextClick()" class="btn btn-outline-primary">
+          <span class="fa fa-chevron-circle-right"></span>
+      </button>
+  </div>
+  <div class="card-footer text-center">
+      <input onchange="ChangeImage()" type="range" min="0" max="4" value="0" id="slider"> 
+  </div>
+</div>
+</body>
